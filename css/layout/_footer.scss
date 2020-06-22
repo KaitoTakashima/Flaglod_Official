@@ -1,0 +1,10 @@
+.l-footer{
+    margin-top:100px;
+    height:100px;
+    & .l-sns_group{
+        display:flex;
+        & li{
+            margin:10px;
+        }
+    }
+}

@@ -1,0 +1,368 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.l-footer {
+  margin-top: 100px;
+  height: 100px;
+}
+
+.l-footer .l-sns_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-footer .l-sns_group li {
+  margin: 10px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 5px;
+}
+
+header .l-header_title {
+  margin: 0 auto;
+}
+
+header .l-hamburger_menu .nav_toggle {
+  position: absolute;
+  top: 30%;
+  right: .5rem;
+  width: 1.75rem;
+  height: 1.5rem;
+  z-index: 500;
+}
+
+header .l-hamburger_menu .nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #E06262;
+  position: absolute;
+  -webkit-transition: opacity .5s, -webkit-transform .5s;
+  transition: opacity .5s, -webkit-transform .5s;
+  transition: transform .5s, opacity .5s;
+  transition: transform .5s, opacity .5s, -webkit-transform .5s;
+}
+
+header .l-hamburger_menu .nav_toggle i:nth-child(1) {
+  top: 0;
+}
+
+header .l-hamburger_menu .nav_toggle i:nth-child(2) {
+  top: 10px;
+}
+
+header .l-hamburger_menu .nav_toggle i:nth-child(3) {
+  top: 20px;
+}
+
+header .l-hamburger_menu .nav_toggle.show i:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+  background-color: #fff;
+}
+
+header .l-hamburger_menu .nav_toggle.show i:nth-child(2) {
+  opacity: 0;
+}
+
+header .l-hamburger_menu .nav_toggle.show i:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+  background-color: #fff;
+}
+
+header .l-hamburger_menu .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
+  background-color: #E06262;
+  z-index: 300;
+}
+
+header .l-hamburger_menu .nav .nav_menu_li {
+  margin: 50px 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+header .l-hamburger_menu .nav.show {
+  opacity: 2;
+  visibility: visible;
+}
+
+main .main_visual {
+  background-image: url("../image/YSS_News_image.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 385px;
+  width: 100%;
+  margin-top: 45px;
+}
+
+.c-more_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px 20px 0 0;
+}
+
+.c-more_btn .more_btn_line {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #000;
+  margin-left: 5px;
+}
+
+.c-news_heading {
+  text-align: center;
+}
+
+ul .news_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+ul .news_detail .c-news_day {
+  margin-right: 15px;
+}
+
+ul .news_content .c-news_title {
+  margin: 20px 0 50px 0;
+  padding: 0 0 10px 0;
+  position: relative;
+  z-index: -1;
+}
+
+ul .news_content .c-news_title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 80%;
+  background: #000;
+}
+
+.c-news_text {
+  padding: 0 30px;
+  line-height: 30px;
+}
+
+.c-movie_works_heading {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.c-movie_works_thumbnail {
+  width: 100%;
+  margin-top: 50px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.c-movie_works_title {
+  margin: 3vw 15vw 0 20px;
+  font-size: 5vw;
+}
+
+.c-movie_works_subtitle {
+  margin-top: 10vw;
+  position: relative;
+  font-size: 3.5vw;
+  letter-spacing: 10px;
+  z-index: -1;
+}
+
+.c-movie_works_subtitle span {
+  display: block;
+  margin: 10vw 5vw 0 0;
+}
+
+.c-pagination {
+  margin-top: 100px;
+}
+
+.c-pagination .c-pagination_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.p-News {
+  margin-top: 100px;
+}
+
+.p-movie_works {
+  height: 700px;
+  margin-bottom: 50vw;
+}
+
+.p-movie_works .p-movie_work_textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.p-movie_works .p-movie_work_textbox .vertical {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.p-movie_works .p-movie_work_textbox .p-movie_works_information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.p-movie_works .p-movie_work_textbox .p-left_information {
+  margin: 18vw 0 0 15vw;
+  font-size: 3vw;
+}
+
+.p-movie_works .p-movie_work_textbox .p-left_information li {
+  margin: 0 10px;
+}
+/*# sourceMappingURL=style.css.map */
