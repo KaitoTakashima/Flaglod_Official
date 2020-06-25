@@ -131,6 +131,7 @@ img:not([alt]) {
   height: auto;
   background-color: #fff;
   padding: 5px;
+  z-index: 1000;
 }
 
 .l-mobile_header .l-header_title {
@@ -150,7 +151,7 @@ img:not([alt]) {
   right: 0;
   width: 3rem;
   height: 3rem;
-  z-index: 500;
+  z-index: 2;
 }
 
 .l-mobile_header .l-hamburger_menu .nav_toggle i {
@@ -206,7 +207,6 @@ img:not([alt]) {
   -webkit-transition: opacity .5s, visibility .5s;
   transition: opacity .5s, visibility .5s;
   background-color: #E06262;
-  z-index: 300;
 }
 
 @media (min-width: 769px) {
@@ -392,14 +392,15 @@ main .main_visual {
   border: 2px solid #333;
   color: #333;
   text-align: center;
-  -webkit-transition: .2s;
-  transition: .2s;
-  z-index: -1;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .c-more_btn .button:hover {
   color: #fff;
   border: 2px solid #E06262;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 .c-more_btn .button::before {
@@ -575,23 +576,10 @@ ul .news_content .c-news_title:after {
           transform: translateY(0);
 }
 
-.fadein {
-  opacity: 0.1;
-  -webkit-transform: translate(0, 50px);
-          transform: translate(0, 50px);
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-}
-
-/* 画面内に入った状態 */
-.fadein.scrollin {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
 .p-News {
   margin-top: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 .p-movie_works {

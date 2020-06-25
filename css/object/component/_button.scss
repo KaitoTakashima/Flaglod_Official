@@ -56,12 +56,12 @@
         border: 2px solid #333;
         color: #333;
         text-align: center;
-        transition: .2s;
-        z-index:-1;
+        transition: .5s;
     }
     & .button:hover {
         color: #fff;
         border: 2px solid $accent_color;
+        transition: .1s;
     }
 
     & .button::before {
@@ -205,14 +205,3 @@ ul{
     transform:translateY(0);
 }
 
-.fadein {
-	opacity : 0.1;
-	transform : translate(0, 50px);
-	transition : all 500ms;
-	}
-
-/* 画面内に入った状態 */
-.fadein.scrollin {
-	opacity : 1;
-	transform : translate(0, 0);
-	}
