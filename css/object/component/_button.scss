@@ -1,16 +1,94 @@
+.main_visual{
+    position:relative;
+    & .c-scroll_nav{
+        position:absolute;
+        bottom:-20px;
+        left:-8px;
+       background-color: #fff;
+        padding:20px 10px 100px;
+        p{
+            writing-mode: vertical-rl;
+            font-size:13px;
+            font-weight: 600;
+            color:$accent_color;
+        }
+        p::after{
+            content:"";
+            position: absolute;
+            bottom:0;
+            left: 50%;
+            width: 2px;
+            height:80px;
+            background: $accent_color;
+            animation:scroll 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+        }
+        @keyframes scroll{
+            0%{
+                transform: scale(1, 0);
+                transform-origin: 0 0;
+            }
+            50% {
+                transform: scale(1, 1);
+                transform-origin: 0 0;
+            }
+            50.1%{
+                transform: scale(1 ,1);
+                transform-origin: 0 100%;
+            }
+            100%{
+                transform: scale(1, 0);
+                transform-origin:0 100%;
+            }
+        }
+    }
+}
+
+
 .c-more_btn{
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    margin:100px 20px 0 0;
+    margin:50px 20px 0 0;
+    & .button {
+        position: relative;
+        display: inline-block;
+        padding: .5em 4em;
+        border: 2px solid #333;
+        color: #333;
+        text-align: center;
+        transition: .2s;
+        z-index:-1;
+    }
+    & .button:hover {
+        color: #fff;
+        border: 2px solid $accent_color;
+    }
 
-    & .more_btn_line{
-        content:"";
-        width:50px;
-        height:1px;
-        background: #000;
-        margin-left:5px;
+    & .button::before {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        background: $accent_color;
+        transform-origin: right;
+        transform: scale(0, 1);
+        transition: transform .1s;
+    }
+    & .button:hover::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+    }
+}
 
+.p-News{
+    & .c-more_btn{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin:150px 20px 0 0;
     }
 }
 
@@ -36,9 +114,9 @@ ul{
             content:"";
             position:absolute;
             left:0;
-            bottom:0;
+            bottom:-20px;
             height:1px;
-            width:80%;
+            width:90%;
             background: #000;
         }
     }
@@ -54,6 +132,10 @@ ul{
 }
 
 .c-movie_works_thumbnail{
+    @include breakpoint (pc){
+        height:300px;
+        width:50%;
+    }
  width:100%;
  margin-top:50px;
  border-top:1px solid #000;
@@ -61,35 +143,33 @@ ul{
 }
 
 .c-movie_works_title{
+    @include breakpoint(pc){
+        font-size:3.5vw;
+        margin:0;
+    }
     margin:3vw 15vw 0 20px;
     font-size: 5vw;
 }
 
 .c-movie_works_subtitle{
-    margin-top:10vw;
+    @include breakpoint(pc){
+        font-size:2vw;
+        margin:50px 30px 0 0;
+    }
+    margin:15vw 10px 0 0;
     position:relative;
     font-size: 3.5vw;
+    opacity:.5;
     letter-spacing:10px;
     z-index:-1;
-    // &:before,:after{
-    //     content:"";
-    //     width:1px;
-    //     height:25px;
-    //     background: #000;
-    //     position:absolute;
-    // }
-    // &:before{
-    //     top:-16%;
-    //     right:20%;
-    // }
-    // & :after{
-    //     bottom:10%;
-    //     left:25%;
-    // }
-    & span{
-        display:block;
-        margin:10vw 5vw 0 0;
-    }
+        & span{
+            display:block;
+            margin:10vw 2vw 0 0;
+            @include breakpoint(pc){
+                margin:5vw 1vw 0 0;
+            }
+
+        }
 }
 
 .c-pagination{
@@ -99,3 +179,40 @@ ul{
         justify-content: space-around;
     }
 }
+
+.biography_main_style{
+    & .c-biography_heading{
+        text-align: center;
+    }
+    & .c-biography_day{
+        margin-top:50px;
+    }
+    & .c-biography_text{
+        margin-top:15px;
+        line-height: 30px;
+    }
+}
+
+
+.c-fadein{
+    opacity:0.1;
+    transform:translateY(50px);
+    transition:all 500ms;
+}
+
+.c-fadein.scrollin{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.fadein {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 500ms;
+	}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}

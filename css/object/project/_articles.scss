@@ -1,16 +1,28 @@
 
-.p-News{
+.p-News {
     margin-top:100px;
 }
 
 .p-movie_works{
-     height:700px;
-     margin-bottom:50vw;
+     height:auto;
+    //  margin-bottom:50vw;
+    & .p-movie_works_content{
+        font-family: $movie_font;
+        margin-top:50px;
+        @include breakpoint (pc){
+            display:flex;
+            justify-content: space-around;
+        }
+    }
     & .p-movie_work_textbox{
+        @include breakpoint (pc){
+            height:50vw;
+        }
         display:flex;
         flex-direction:row-reverse;
         justify-content:space-between;
         margin-top:50px;
+        height:70vw;
         & .vertical{
         writing-mode: vertical-rl;
         text-orientation: upright;
@@ -20,12 +32,28 @@
             flex-direction:row-reverse;
         }
         & .p-left_information{
+            @include breakpoint (pc){
+                margin:100px 50px 0 0;
+                font-size:2vw;
+            }
             margin:18vw 0 0 15vw;
             font-size: 3vw;
             & li{
+                @include breakpoint (pc){
+                    margin:0 5px;
+                }
                 margin:0 10px;
             }
         }
+    }
+}
+
+.biography_main_style{
+    & .p-biography{
+        margin-top:100px;
+    }
+    & .p-biography_content{
+        padding:0 50px;
     }
 }
 

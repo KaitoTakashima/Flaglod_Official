@@ -2,6 +2,7 @@
 
     box-sizing:border-box;
     list-style: none;
+    
 }
 a{
 	color:inherit;
@@ -9,6 +10,7 @@ a{
 }
 
 
+$movie_font:　a-otf-ryumin-pr6n, serif;
 $accent_color :#E06262;
 
 @mixin breakpoint( $point ) {
