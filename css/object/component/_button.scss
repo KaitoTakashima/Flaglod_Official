@@ -4,7 +4,7 @@
         position:absolute;
         bottom:-20px;
         left:-8px;
-       background-color: #fff;
+        background-color: #fff;
         padding:20px 10px 100px;
         p{
             writing-mode: vertical-rl;
@@ -94,13 +94,55 @@
 
 .c-news_heading{
     text-align: center;
+    margin-bottom:100px;
+    font-family: ten-mincho-text, serif;
+    font-weight: initial;
 }
+.c-news_bg{
+    background-image:url("../image/biored.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    object-fit: cover;
+    text-align: center;
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+    padding:40px 0;
+    @include breakpoint (pc){
+        padding:80px 0;
+        font-size:30px;
+    }
+    @include breakpoint (wide){
+        padding:120px 0;
+        font-size:30px;
+    }
+}
+.c-news_heading:after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:180px;
+    height:1px;
+    left:40px;
+    width:85%;
+    background: rgba(0, 0, 0, .1);
+    @include breakpoint (pc){
+        top:265px;
+        width:87%;
+    }
+    @include breakpoint (wide){
+        top:345px;
+    }
+}
+
 ul{
+    font-family:$movie_font;
     & .news_detail{
         display:flex;
         margin-top:50px;
         & .c-news_day{
             margin-right:15px;
+            color:$accent_color;
         }
     }
     & .news_content{
@@ -117,7 +159,7 @@ ul{
             bottom:-20px;
             height:1px;
             width:90%;
-            background: #000;
+            background: rgba(0, 0, 0, .1);
         }
     }
 }
@@ -129,6 +171,8 @@ ul{
 .c-movie_works_heading{
     text-align: center;
     margin-top:100px;
+    font-family: ten-mincho-text, serif;
+    font-weight: initial;
 }
 
 .c-movie_works_thumbnail{
@@ -137,9 +181,7 @@ ul{
         width:50%;
     }
  width:100%;
- margin-top:50px;
- border-top:1px solid #000;
- border-bottom:1px solid #000;
+ margin-top:70px;
 }
 
 .c-movie_works_title{
@@ -181,8 +223,23 @@ ul{
 }
 
 .biography_main_style{
-    & .c-biography_heading{
+    & .c-profile_bg{
+        background-image:url("../../../image/biored.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        object-fit: cover;
         text-align: center;
+        background-color:rgba(255,255,255,0.8);
+        background-blend-mode:lighten;
+        padding:40px 0;
+        @include breakpoint (pc){
+            padding:50px 0;
+            font-size:30px;
+        }
+        @include breakpoint (wide){
+            padding:100px 0;
+        }
     }
     & .c-biography_day{
         margin-top:50px;

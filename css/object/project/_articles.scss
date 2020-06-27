@@ -4,7 +4,12 @@
     position:relative;
     z-index:1;
 }
-
+.flex{
+    display:flex;
+    & li:nth-child(even){
+        flex-direction: row-reverse;
+    }
+}
 .p-movie_works{
      height:auto;
     //  margin-bottom:50vw;

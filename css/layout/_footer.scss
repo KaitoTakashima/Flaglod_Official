@@ -1,10 +1,12 @@
 .l-footer{
     margin-top:100px;
     height:100px;
+    text-align: center;
     & .l-sns_group{
         display:flex;
+        justify-content: center;
         & li{
-            margin:10px;
+            margin:10px 20px;
         }
     }
     & .l-copyright{
