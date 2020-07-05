@@ -1,12 +1,12 @@
 main{
     & .main_visual{
-        background-image:url("../image/YSS_News_image.jpeg");
+        background-image:url("../image/test2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position:center;
         object-fit: cover;
         width:100%;
-        height:100vw;
+        height:120vw;
         margin-top:45px;
         z-index:-1;
         @include breakpoint(pc){

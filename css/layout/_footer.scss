@@ -1,10 +1,11 @@
 .l-footer{
     margin-top:100px;
-    height:100px;
+    height:120px;
     text-align: center;
     & .l-sns_group{
         display:flex;
         justify-content: center;
+        color:$accent_color;
         & li{
             margin:10px 20px;
         }
@@ -12,5 +13,8 @@
     & .l-copyright{
         font-size:15px;
         margin:10px 0 0 10px;
+        @include breakpoint(pc){
+            font-size:20px;
+        }
     }
 }

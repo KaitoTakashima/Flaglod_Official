@@ -3,6 +3,8 @@
     margin-top:100px;
     position:relative;
     z-index:1;
+    // font-family: "Nikukyu"; font-family: "Hannari";
+    font-family: "Sawarabi Gothic";
 }
 .flex{
     display:flex;
@@ -14,7 +16,6 @@
      height:auto;
     //  margin-bottom:50vw;
     & .p-movie_works_content{
-        font-family: $movie_font;
         margin-top:50px;
         @include breakpoint (pc){
             display:flex;
@@ -37,6 +38,7 @@
         & .p-movie_works_information{
             display:flex;
             flex-direction:row-reverse;
+            font-family: ryo-display-plusn, serif;
         }
         & .p-left_information{
             @include breakpoint (pc){
@@ -55,12 +57,58 @@
     }
 }
 
-.biography_main_style{
-    & .p-biography{
-        margin-top:100px;
+
+.p-biography{
+    margin-top:100px;
+    & .p-band_profile{
+      width:90%;
+      margin:50px auto;
+      @include breakpoint (pc){
+        margin:70px auto;
     }
-    & .p-biography_content{
-        padding:0 50px;
+    }
+    & .p-membar_profile{
+        margin-top:200px;
+
+        & .p-member_infomation{
+            position:relative;
+            height:80vw;
+            overflow: hidden;
+            margin-top:100px;
+            @include breakpoint (pc){
+
+            }
+
+            & .p-profile{
+                position: absolute;
+                top:25vw;
+                color:#fff;
+                background-color:rgba(197, 64, 64,.6);
+                height:30vw;
+                width:50vw;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                & .p-detail_info{
+                    li{
+                        margin:2px 0;
+                    }
+                }
+            }
+
+            & .p-left_profile{
+                padding-left:7vw;
+            }
+
+            & .p-right_profile{
+                right:0;
+                padding-left:23vw;
+        
+            }
+        }
     }
 }
+
+
+
 

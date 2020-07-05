@@ -1,8 +1,7 @@
 *{
 
     box-sizing:border-box;
-    list-style: none;
-    // font-family: a-otf-futo-min-a101-pr6n, serif;
+	list-style: none;
 }
 a{
 	color:inherit;
@@ -10,7 +9,6 @@ a{
 }
 
 
-$movie_font:　a-otf-ryumin-pr6n, serif;
 $accent_color :rgb(197, 64, 64);
 
 @mixin breakpoint( $point ) {

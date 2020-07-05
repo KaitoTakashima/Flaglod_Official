@@ -1,9 +1,10 @@
 .l-header{
+    height:50px;
     @include breakpoint (pc){
         margin-top:30px;
     }
     & svg{
-        margin-top:10px;
+        margin-top:15px;
         width:200px;
         height:40px;
         @include breakpoint (pc){
@@ -76,7 +77,6 @@
                 @include breakpoint (pc){
                     visibility: visible;
                 }
-                font-family:　$movie_font;
                 position:fixed;
                 top:0;
                 left:0;
@@ -90,17 +90,19 @@
 
                 & .l-sns_group{
                     display:flex;
-                    margin-left:20px;
                     color:#fff;
                     li {
-                        margin-right:50px;
+                        margin-right:60px;
                     }
                 }
-                & .nav_menu_li{
-                    margin:40px 30px;
-                    color:#fff;
-                    font-size:20px;
-                    font-weight: 800;
+                & .nav_menu_content{
+                    margin:70px 0 0 60px;
+                    & .nav_menu_li{
+                        margin:40px 0;
+                        color:#fff;
+                        font-size:20px;
+                        font-weight: 800;
+                    }
                 }
             }
 
@@ -115,7 +117,7 @@
         display:none;
         @include breakpoint (pc){
         display:block;
-        margin-top:100px;
+        margin-top:120px;
             ul{
                 display:flex;
                 justify-content: space-around;

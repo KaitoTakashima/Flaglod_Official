@@ -6,11 +6,17 @@
         left:-8px;
         background-color: #fff;
         padding:20px 10px 100px;
+        @include breakpoint(pc){
+            padding:20px 20px 100px;
+        }
         p{
             writing-mode: vertical-rl;
             font-size:13px;
             font-weight: 600;
             color:$accent_color;
+            @include breakpoint(pc){
+                font-size:18px;
+            }
         }
         p::after{
             content:"";
@@ -95,7 +101,6 @@
 .c-news_heading{
     text-align: center;
     margin-bottom:100px;
-    font-family: ten-mincho-text, serif;
     font-weight: initial;
 }
 .c-news_bg{
@@ -135,8 +140,31 @@
     }
 }
 
+.c-biography_heading {
+    text-align: center;
+    margin-bottom:80px;
+    font-weight: initial;
+}
+.c-biography_bg{
+    background-image:url("../image/biored.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    object-fit: cover;
+    text-align: center;
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+    padding:30px 0;
+    @include breakpoint (pc){
+        padding:80px 0;
+        font-size:30px;
+    }
+    @include breakpoint (wide){
+        padding:120px 0;
+        font-size:30px;
+    }
+}
 ul{
-    font-family:$movie_font;
     & .news_detail{
         display:flex;
         margin-top:50px;
@@ -171,8 +199,10 @@ ul{
 .c-movie_works_heading{
     text-align: center;
     margin-top:100px;
-    font-family: ten-mincho-text, serif;
     font-weight: initial;
+    @include breakpoint(pc){
+        margin-top:60px;
+    }
 }
 
 .c-movie_works_thumbnail{
@@ -191,6 +221,7 @@ ul{
     }
     margin:3vw 15vw 0 20px;
     font-size: 5vw;
+    font-family: ryo-display-plusn, serif;
 }
 
 .c-movie_works_subtitle{
@@ -198,6 +229,7 @@ ul{
         font-size:2vw;
         margin:50px 30px 0 0;
     }
+    font-family: ro-nikkatsu-sei-kai-std, serif;
     margin:15vw 10px 0 0;
     position:relative;
     font-size: 3.5vw;
@@ -212,6 +244,10 @@ ul{
             }
 
         }
+}
+.c-discography{
+    margin-top:100px;
+    text-align: center;
 }
 
 .c-pagination{
@@ -254,7 +290,7 @@ ul{
 .c-fadein{
     opacity:0.1;
     transform:translateY(50px);
-    transition:all 500ms;
+    transition:all 200ms;
 }
 
 .c-fadein.scrollin{
@@ -262,3 +298,306 @@ ul{
     transform:translateY(0);
 }
 
+
+.c-bio_bg{
+    margin:0 auto;
+    background-image:url("../image/test2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    object-fit: cover;
+    opacity: .5;
+    width:90%;
+    height:50vw;
+}
+
+.p-membar_profile{
+    & .p-member_infomation{
+       & .c-member_picture{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            object-fit: cover;
+            // opacity: .8;
+            width:80%;
+            height:50vw;
+            position:absolute;
+        }
+        & .c-kaisei_picture{
+            background-image: url("../image/test2.jpg");
+            right:0;
+            @include breakpoint(pc){
+                position:absolute;
+                right:0;
+            }
+        }
+        & .c-member_responsible{
+            font-size:2.5vw;
+        }
+        & .c-member_name{
+            font-size:3.5vw;
+            margin:5px 0;
+        }
+        & .p-detail_info{
+            font-size: 2.5vw;
+        }
+
+        & .c-sengan_picture{
+            background-image: url("../image/test2.jpg");
+            left:0;
+        }
+        & .c-isema_picture{
+            background-image: url("../image/test2.jpg");
+            right:0;
+        }
+        & .c-kaito_picture{
+            background-image: url("../image/test2.jpg");
+            left:0;
+        }
+    }
+}
+
+.c-fadein_left{
+    opacity:0;
+    transform: translateX(-200px);
+}
+
+@keyframes scrollin_left{
+    0% {
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+.scrollin_left{
+    animation:scrollin_left .2s cubic-bezier(1, 1, .55, .95) .3s forwards;
+}
+
+
+
+.c-fadein_right{
+    opacity:0;
+    transform: translateX(200px);
+}
+
+@keyframes scrollin_right{
+    0% {
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+.scrollin_right{
+    animation:scrollin_right .2s cubic-bezier(1, 1, .55, .95) .3s forwards;
+ }
+
+
+.c-contact_heading{
+    text-align: center;
+    font-weight: inherit;
+    margin-top: 100px;
+    @include breakpoint (pc){
+        margin-top:50px;
+    }
+}
+
+.inquiry{
+  margin:0 auto;
+  padding:10px;
+    & th,td{
+        display:block;
+        text-align: left;
+        @include breakpoint (pc){
+            display:inline;
+        }
+    }
+    & td{
+      margin-left:20px;
+      & .content{
+          @include breakpoint (pc){
+              width:50vw;
+          }
+      }
+    }
+    & th{
+         margin:80px 0 30px 0;
+        @include breakpoint (pc){
+            margin-left:50px;
+        }
+        & .haveto{
+            font-size:12px;
+            background-color: rgb(255, 107, 107);
+            color:#fff;
+            padding:6px 20px;
+            margin-right:10px;
+            @include breakpoint (pc){
+                margin-left:50px;
+            }
+        }
+    }
+
+    & .textsp,.mailsp{
+        border:none;
+        width:80vw;
+        height:5vw;
+        @include breakpoint (pc){
+            width:55vw;
+        }
+        @include breakpoint (wide){
+            width:65vw;
+        }
+    }
+
+    & tr{
+        position: relative;
+        display:block;
+        @include breakpoint (pc){
+            margin-top:60px;
+        }
+        &:first-child{
+           & th{
+               margin-top:50px;
+           }
+        }
+        &:nth-child(3){
+            margin:0;
+            @include breakpoint (pc){
+                display:flex;
+                align-items: center;
+            }
+            & td{
+                margin-top:20px;
+                @include breakpoint (pc){
+                    margin-top:56px;
+                }
+            }
+            &:after{
+             bottom:-28px;
+            }
+        }
+        &:after{
+            content:"";
+            bottom:-40px;
+            position:absolute;
+            height:1px;
+            width:100%;
+            background: rgba(0, 0, 0, .3);
+            @include breakpoint (pc){
+                left:50px;
+                bottom:-30px;
+                width:90%;
+            }
+        }
+        &:last-child{
+            margin-top: 80px;
+            &:after{
+                content:none;
+            }
+        }
+       
+    }
+}
+
+.last{
+    font-size:15px;
+    margin-top:50px;
+    padding:0 20px;
+  
+    & .check{
+        color:#fff;
+        font-size:18px;
+        font-weight:bold;
+        border-radius:5px;
+        border: none;
+        display:block;
+        padding:1em 0;
+        width:50%;
+        margin:70px auto 0px auto;
+        background-color: $accent_color;
+    }
+    & .formbtn{
+        color:#fff;
+        font-size:18px;
+        font-weight:bold;
+        border-radius:5px;
+        border: none;
+        display:inline-block;
+        padding:1em 0;
+        width:50%;
+        margin:50px auto;
+        background-color: $accent_color;
+    }
+    & .back{
+        color:#fff;
+        font-size:15px;
+        font-weight:bold;
+        border-radius:3px;
+        border: none;
+        display:inline-block;
+        padding:1em 0;
+        width:20%;
+        margin:50px 20px 0  30px;
+        background-color:rgb(167, 167, 167);
+    }
+}
+
+.c-pc_pagination{
+    display:none;
+    @include breakpoint(pc){
+        display:flex;
+        justify-content: center;
+        margin-top:130px;
+            & .wp-pagenavi {
+                clear: both;
+                & .pages{
+                    display:none;
+                }
+                & a,span{
+                    text-decoration: none;
+                    border:0px solid #FFFFFF;
+                    padding:10px;
+                    font-size:2vw;
+                    margin: 10px;
+                    &:hover{
+                        background:$accent_color;
+                        border-radius: 2px;
+                        color:#fff;
+                    }
+                }
+                & .current{
+                   color:$accent_color;
+                }
+            }
+    }
+}
+
+.c-mobile_pagination{
+    & .navigation{
+        @include breakpoint (pc){
+            display:none;
+        }
+        margin-top:130px;
+        & .screen-reader-text{
+            display:none;
+        }
+        & .nav-links{
+            display:flex;
+            justify-content: space-evenly;
+            flex-direction: row-reverse;
+            & .nav-previous,.nav-next{
+                & :hover{
+                    color:#fff;
+                    background-color: $accent_color;
+                }
+                & a{
+                    padding:15px;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}
