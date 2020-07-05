@@ -32,6 +32,7 @@
 <body <?php body_class();?> >
     <header class="l-header">
      <div class="l-mobile_header">
+        <?php if( is_front_page() && is_home() ):?>
             <h1 class="l-header_title">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -55,6 +56,32 @@
                     </svg>
                 </a>
             </h1>
+        <?php else: ?>
+            <h2 class="l-header_title">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="レイヤー_2_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                        y="0px" viewBox="0 0 419.7 181.4" style="enable-background:new 0 0 419.7 181.4;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:none;stroke:#231815;stroke-width:3;stroke-miterlimit:10;}
+                        </style>
+                        <path class="st0" d="M59.3,4.2c-18.8-0.3-38.8-0.3-57.8,0v125"/>
+                        <path class="st0" d="M0.9,64.6c19.6,0.3,38.6,0.3,58.4,0"/>
+                        <line class="st0" x1="80" y1="1.4" x2="80" y2="127.8"/>
+                        <path class="st0" d="M160.4,97.6c0,3.2-0.4,6.4-1.3,9.5c-3.7,13.6-15.1,23.5-28.6,23.5c-16.5,0-29.9-14.8-29.9-33s13.4-33,29.9-33
+                            C147,64.6,160.4,79.4,160.4,97.6z"/>
+                        <line class="st0" x1="160.4" y1="130.6" x2="160.4" y2="97.6"/>
+                        <ellipse class="st0" cx="210.9" cy="97.6" rx="29.9" ry="33"/>
+                        <line class="st0" x1="260.1" y1="1.4" x2="260.1" y2="130.6"/>
+                        <ellipse class="st0" cx="309.2" cy="97.6" rx="29.9" ry="33"/>
+                        <ellipse class="st0" cx="388.2" cy="97.6" rx="29.9" ry="33"/>
+                        <line class="st0" x1="418.2" y1="0" x2="418.2" y2="129.2"/>
+                        <path class="st0" d="M240.8,97.6v82.4h-56.6l204-135.3"/>
+                    </svg>
+                </a>
+            </h1>
+        <?php endif; ?>
+
             <div class="l-hamburger_menu">
                 <span class="nav_toggle">
                     <i></i>
