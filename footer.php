@@ -4,7 +4,8 @@
             <li><a href=""><i class="lab la-instagram la-2x"></i></a></li>
             <li><a href=""><i class="lab la-youtube la-2x"></i></a></li>
         </ul>
-        <address class="l-copyright">&copy;FLAGLOD All Rights  Reserved</address>
+        <div class="l-copyright">&copy;FLAGLOD All Rights  Reserved</div>
     </footer>
+    <?php wp_footer();?>
 </body>
 </html>
