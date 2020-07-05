@@ -7,7 +7,7 @@
                     <p class="c-news_day"><?php the_time('Y/m/d');?></p>
                 </li>
                 <li class="news_content">
-                    <a href=""><h2 class="c-news_title"><?php the_title();?></h2></a>
+                    <a href=""><h1 class="c-news_title"><?php the_title();?></h1></a>
                 </li>
             </ul>
             <div class="c-news_text">
