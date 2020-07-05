@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <main>
         <section class="p-movie_works">
-            <h2 class="c-movie_works_heading c-movie_bg">映像</h2>
+            <h1 class="c-movie_works_heading c-movie_bg">映像</h1>
 
             <?php if(have_posts()) : ?>
             <?php while(have_posts()) : the_post(); ?>
