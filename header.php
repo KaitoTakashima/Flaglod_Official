@@ -4,39 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'kdf0tqt',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-      </script>
-    <script>
-        (function(d) {
-          var config = {
-            kitId: 'kdf0tqt',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-      </script>
-
-      <!-- 貂明朝 -->
-      <!-- <script>
-        (function(d) {
-          var config = {
-            kitId: 'kdf0tqt',
-            scriptTimeout: 3000,
-            async: true
-          },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-      </script> -->
-      <?php wp_head(); ?>
+  (function(d) {
+    var config = {
+      kitId: 'fyx7yfm',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'fyx7yfm',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+   <?php wp_head(); ?>
 </head>
 <body <?php body_class();?> >
     <header class="l-header">
@@ -71,14 +62,14 @@
                     <i></i>
                 </span>
                 <nav class="nav">
-                    <ul>
+                    <ul class="nav_menu_content">
                         <li class="nav_menu_li"><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
                         <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('news');?>">お知らせ</a></li>
                         <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('movie');?>">映像</a></li>
-                        <li class="nav_menu_li"><a href="#">略歴</a></li>
-                        <li class="nav_menu_li"><a href="#">作品</a></li>
+                        <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('biography');?>">略歴</a></li>
+                        <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('discography');?>">作品</a></li>
                         <li class="nav_menu_li"><a href="#">お店</a></li>
-                        <li class="nav_menu_li"><a href="#">お問い合わせ</a></li>
+                        <li class="nav_menu_li"><a href="<?php echo get_permalink(44)?>">お問い合わせ</a></li>
                         <ul class="l-sns_group">
                             <li><a href=""><i class="lab la-twitter la-3x"></i></a></li>
                             <li><a href=""><i class="lab la-instagram la-3x"></i></a></li>
@@ -95,10 +86,10 @@
                 <li class="nav_menu_li"><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
                 <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('news');?>">お知らせ</a></li>
                 <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('movie');?>">映像</a></li>
-                <li class="nav_menu_li"><a href="#">略歴</a></li>
-                <li class="nav_menu_li"><a href="#">作品</a></li>
+                <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('biography');?>">略歴</a></li>
+                <li class="nav_menu_li"><a href="<?php echo get_post_type_archive_link('discography');?>">作品</a></li>
                 <li class="nav_menu_li"><a href="#">お店</a></li>
-                <li class="nav_menu_li"><a href="#">お問い合わせ</a></li>
+                <li class="nav_menu_li"><a href="<?php echo get_permalink(44)?>">お問い合わせ</a></li>
                 <ul class="l-sns_group">
                     <li><a href=""><i class="lab la-twitter la-2x"></i></a></li>
                     <li><a href=""><i class="lab la-instagram la-2x"></i></a></li>
